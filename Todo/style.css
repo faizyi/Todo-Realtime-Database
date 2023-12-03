@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    background-color: whitesmoke;
+    height: 100vb;
+}
+.header{
+    max-width: 800px;
+    background-color: white;
+    box-shadow: 0px 0px 5px black;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    transition: .3s ease;
+}
+.header .heading{
+    font-size: 18px;
+}
+.header-icon{
+    display: flex;
+}
+.header-icon .logout-btn{
+    margin-top: 5px;
+    margin-right: 20px;
+}
+.logout-btn button{
+    padding: 5px;
+    font-size: 15px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: blue;
+    cursor: pointer;
+}
+.header-icon .home{
+    margin-right: 1px;
+    margin-top: 2px;
+}
+.home .home-icon{
+    font-size: 33px;
+    color: black;
+    cursor: pointer;
+    transition: .3s ease;
+    margin-right: 5px;
+}
+.todo-container{
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 5px;
+    padding: 28px 0;
+    box-shadow: 0px 0px 5px black;
+    transition: .3s ease;
+}
+.todo-input{
+    height: 52px;
+    width: 90%;
+    padding: 0 25px;
+    position: relative;
+    margin-left: 35px;
+}
+.todo-input .form{
+    border: 1px solid rgb(167, 162, 162);
+    border-radius: 5px;
+}
+.todo-input input{
+    height: 100%;
+    width: 95%;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    transition: .2s ease;
+}
+.todo-input input::placeholder{
+    color: #bfbfbf;
+    font-size: 18px;
+}
+#add-btn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    cursor: pointer;
+    position: relative;
+    top: 5px;
+}
+.add-btn{
+    display: none;
+    transition: .4s ease;
+}
+.hr{
+    margin-top: 30px;
+}
+.clear-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clear-btn button{
+    padding: 10px;
+    font-size: 15px;
+    width: 30%;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.todo-ul{
+    margin: 20px 15px;
+    overflow-y: auto;
+    max-height: 310px;
+    padding-right: 10px;
+}
+.todo-ul::-webkit-scrollbar{
+    width: 5px;
+  }
+  .todo-ul::-webkit-scrollbar-track{
+    background: #cec9c9;
+    border-radius: 25px;
+  }
+  .todo-ul::-webkit-scrollbar-thumb{
+    background: rgb(126, 122, 122);
+    border-radius: 25px;
+  }
+.todo-box{
+    cursor: pointer;
+  }
+.todo-ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.todo-ul .task{
+    font-size: 17px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 16px;
+    cursor: pointer;
+}
+.task p{
+    font-size: 18px;
+    width: 650px;
+}
+#todo-setting button{
+    background-color: transparent;
+    border: none;
+}
+#todo-setting #todo-icon{
+    font-size: 22px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+
+
+
+/* media queries */
+@media screen and (min-width: 481px) and (max-width: 767px) {
+    /* Styles for small tablets go here */
+    .header{
+        max-width: 450px;
+        padding: 20px;
+    }
+    .todo-container{
+        max-width: 450px;
+        padding: 20px 0;
+    }
+    .task p{
+        font-size: 15px;
+        width: 300px;
+    }
+    .todo-input{
+        margin-left: 23px;
+    }
+    .todo-input input{
+        padding: 10px;
+        width: 90%;
+    }
+    #add-btn{
+        font-size: 25px;
+    }
+    .hr{
+        margin-top: 15px;
+    }
+    
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 480px){
+
+    .header{
+        max-width: 350px;
+        padding: 7px;
+    }
+    .todo-container{
+        max-width: 350px;
+        padding: 15px 0;
+    }
+    .task p{
+        font-size: 14px;
+        width: 260px;
+    }
+    .todo-input{
+        margin-left: 15px;
+    }
+    .todo-input input{
+        padding: 10px;
+        font-size: 15px;
+        width: 90%;
+    }
+    #add-btn{
+        font-size: 20px;
+    }
+    .hr{
+        margin-top: 5px;
+    }
+    .header .heading{
+        font-size: 15px;
+    }
+    .home .home-icon{
+        font-size: 25px;
+    }
+    .home .home-icon:hover{
+        font-size: 35px;
+    }
+    
+
+  }
+  
+  @media screen and (min-width: 100px) and (max-width: 321px){
+    
+    .header{
+        max-width: 270px;
+        padding: 5px;
+    }
+    .todo-container{
+        max-width: 270px;
+        padding: 10px 0;
+    }
+    .task p{
+        font-size: 10px;
+        width: 190px;
+    }
+    .todo-input{
+        margin-left: 13px;
+    }
+  
+    .todo-input input{
+        padding: 5px;
+        font-size: 10px;
+        width: 85%;
+    }
+    #add-btn{
+        font-size: 20px;
+    }
+  
+    .todo-input input::placeholder{
+        font-size: 10px;
+    }
+    .hr{
+        margin-top: -10px;
+    }
+    .header .heading{
+        font-size: 10px;
+    }
+    .home .home-icon{
+        font-size: 20px;
+    }
+    .home .home-icon:hover{
+        font-size: 25px;
+    }
+    
+
+  }
+
+
+
